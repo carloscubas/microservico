@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
-@RequestMapping("/index")
+@RequestMapping("/")
 public class IndexController {
 
 	@GetMapping
 	public ResponseEntity<String> index() {
-		return new ResponseEntity<>("Ecomemrce", OK);
+		return new ResponseEntity<>("Ecommerce", OK);
 	}
 
 }

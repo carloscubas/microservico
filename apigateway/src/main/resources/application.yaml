@@ -1,0 +1,22 @@
+eureka:
+  instance:
+    hostname: localhost
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway
+
+zuul:
+
+  routes:
+      
+    ecommerce:
+      path: /ecommerce/**
+      serviceId: ecommerce
+
+    stock:
+      path: /stock/**
+      serviceId: stock
