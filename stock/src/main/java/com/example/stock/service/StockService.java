@@ -28,7 +28,7 @@ public class StockService {
 	}
 
 	public void updateStock(Sale sale) {
-		Product product = getProduct(sale.getId());
+		Product product = getProduct(sale.getIdProduct());
 		product.setStock(product.getStock() - sale.getAmount());
 		save(product);
 	}

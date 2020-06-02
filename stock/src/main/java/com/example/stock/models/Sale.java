@@ -2,18 +2,9 @@ package com.example.stock.models;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
 public class Sale {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-	private Long id;
-    
 	private Long idProduct;
 
 	private Integer amount;
@@ -43,15 +34,4 @@ public class Sale {
 	public void setData(Date data) {
 		this.data = data;
 	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
-	
-	
 }
