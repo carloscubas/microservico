@@ -18,3 +18,6 @@
 * Eureka Server Spring Cloud Discovery
 * spring-cloud-netflix Eureka Server.
 * Intelligent and programmable routing with Spring Cloud Netflix Zuul.
+
+## Rabbit Cloud
+https://www.cloudamqp.com/
