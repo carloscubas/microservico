@@ -39,9 +39,11 @@ public class StockController {
         return new ResponseEntity<>(services.getProduct(idProduct), OK);
     }
     
+    /*
 	@PostMapping("/updateStock")
 	public ResponseEntity<Long> addHistory(@RequestBody Sale sale) {
 		services.updateStock(sale);
 		return ResponseEntity.ok().build();
 	}
+	*/
 }

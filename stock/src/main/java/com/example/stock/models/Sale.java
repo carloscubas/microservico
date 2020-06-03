@@ -34,4 +34,11 @@ public class Sale {
 	public void setData(Date data) {
 		this.data = data;
 	}
+
+	@Override
+	public String toString() {
+		return "Sale [idProduct=" + idProduct + ", amount=" + amount + "]";
+	}
+	
+	
 }
