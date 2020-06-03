@@ -21,7 +21,6 @@ public class RabbitConfigure {
 
 	@Bean
 	public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
-		System.out.println("rmqhost is ");
 		RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
 		rabbitTemplate.setMessageConverter(messageConverter());
 		return rabbitTemplate;
