@@ -11,25 +11,24 @@ ribbon:
   MaxAutoRetries: 1
   MaxAutoRetriesNextServer: 2
   OkToRetryOnAllOperations: true
-
+  ConnectTimeout: 5000
+  ReadTimeout: 5000
+  ServerListRefreshInterval: 5000 
+  eureka:
+    enabled: true
 
 eureka:
-    enabled: true
+    client:
+        registryFetchIntervalSeconds : 30
 
 hystrix:
     command:
-        stock:
+        default:
             execution:
                 isolation:
                     strategy: THREAD
                     thread:
-                        timeoutInMilliseconds: 2000
-        ecommerce:
-            execution:
-                isolation:
-                    strategy: THREAD
-                    thread:
-                        timeoutInMilliseconds: 2000
+                        timeoutInMilliseconds: 8000
 
 zuul:
     host:
