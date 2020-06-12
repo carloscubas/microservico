@@ -1,5 +1,3 @@
-# https://stackoverflow.com/questions/28904247/zuul-timing-out-in-long-ish-requests
-
 server:
     port: 8080
 
