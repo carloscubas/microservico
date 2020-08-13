@@ -1,0 +1,38 @@
+server:
+  port: ${PORT:44258}
+
+spring:
+  profiles: test
+
+  cloud:
+    config:
+      enabled: false
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:ecommerce;DB_CLOSE_DELAY=-1
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+eureka:
+  client:
+    enabled: false
+    
+    
+    

@@ -1,12 +1,15 @@
 package com.example.ecommerce.resources;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.ecommerce.model.Sale;
 import com.example.ecommerce.services.CheckoutServices;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,6 +24,11 @@ public class CheckoutController {
 	public ResponseEntity<Boolean> sale(@RequestBody Sale sale) {
 		services.saleProduct(sale);
 		return ResponseEntity.ok().build();
+	}
+	
+	@GetMapping("/sale")
+	public ResponseEntity<List<Sale>> sales() {
+		return ResponseEntity.ok(services.getAllSales());
 	}
 
 }

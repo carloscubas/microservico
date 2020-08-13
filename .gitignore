@@ -1,9 +1,13 @@
 /.metadata/
 /.classpath
+*/.classpath
+stock/.classpath
 /.settings/org.eclipse.jdt.core.prefs
 apigateway/src/main/resources/application.yml
 ecommerce/.classpath
 ecommerce/.settings/org.eclipse.jdt.apt.core.prefs
 ecommerce/.settings/org.eclipse.jdt.core.prefs
 .vscode/
+.sonarlint/
+*/bin/
 
